@@ -1,39 +1,30 @@
 import pygame
-
+from colors import *
 
 class LED():
-	def __init__(self, pos=(0, 0), radius=25, lit=False):
+    def __init__(self, x, y, radius = 20, lit = False, color = EMPTY):
+        self.x = x
+        self.y = y
+        self.lit = lit
+        self.radius = radius
+        self.screen = pygame.display.get_surface()
+        self.color = color
+        self.pos_x = int(self.x * (self.radius * 2 + 5)) + (self.radius)
+        self.pos_y = int(self.y * (self.radius * 2 + 5)) + (self.radius) + 40
 
-	   # Initializes the LED
+    def draw(self):
+        (color, thickness) = (self.color, 0) if self.lit else (WHITE, 1)
+        # If LED ON draw color rect, else if LED OFF draw WHITE lines
+        # if self.lit:
+        #     color = self.color
+        #     thickness = 0
+        # else:
+        #     color = WHITE
+        #     thickness = 1
+        pygame.draw.circle(self.screen, color, (self.pos_x, self.pos_y), self.radius, thickness)
+        pygame.draw.rect(self.screen, color,(self.pos_x-self.radius, self.pos_y-self.radius, (2*self.radius),(2*self.radius)),thickness)
 
-		self.pos = pos
-		self.lit = lit
-		self.radius = radius
-		self.screen = pygame.display.get_surface()
-		self.color = (255, 255, 255)
-		self.pos_x = int(self.pos[0] * (self.radius * 2 + 5)) + (self.radius)
-		self.pos_y = int(self.pos[1] * (self.radius * 2 + 5)) + (self.radius) + 40
-
-	def draw(self):
-
-		#Draws a circle,
-		w = []
-		if self.lit: # has it been clicked?
-			thickness = 0
-		else:
-			self.color = [255,255,255]
-			thickness = 1
-
-		pygame.draw.circle(self.screen, self.color, (self.pos_x, self.pos_y), self.radius, thickness)
-
-		# Draws a square
-		pygame.draw.rect(self.screen,self.color,(self.pos_x-self.radius, self.pos_y-self.radius, (2*self.radius),(2*self.radius)),thickness)
-
-	def clicked(self, colour):
-
-		# what to do when clicked
-		self.color = colour
-		if self.lit:
-			self.lit = False
-		else:
-			self.lit = True
+    # Switch state of LED. LED ON = color, LED OFF = EMPTY/BLACK
+    def clicked(self, colour):
+        self.lit = not self.lit
+        self.color = colour if self.lit else EMPTY

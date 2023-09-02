@@ -1,3 +1,20 @@
+# 2023 / 09 / 01
+Sr. Araujo ChangeLog
++ Added  and updated code to be more compatible with Thonny 4.0.1 over
+  Raspberry Pi OS (64-bit) 2023-05-03
++ Added a few example images png (Cactus.png <created with Gimp>,
+  8x8grid-image.png <created with gridSense.py>, sombrilla.png <created
+  with gridSense.py>)
++ Added a few comments on code
++ Updated detect Sense HAT code in Raspberry Pi OS (64-bit) 2023-05-03
++ Added gridColours.py to declare Colours Variables
++ Adjusted name of variables, metods, algorithms, programs and files
++ Added export to PNG
+- No code changes in gridUnicorn.py and gridUnicornHAT.py (I don't have
+  any of this to test)
+I'm a native spanish speaker. I understand english but I prefer my
+native language for comunication
+
 # 8x8GridDraw
 
 These Python Pygame applications are for creating 8x8 pixel images and animations for loading onto either a Raspberry Pi [Sense HAT] (https://www.raspberrypi.org/blog/buy-the-sense-hat-as-seen-in-space/) (as used on the Astro Pi), [UnicornHat] (http://shop.pimoroni.com/products/unicorn-hat) or [UnicornPHAT] (https://shop.pimoroni.com/products/unicorn-phat) LED matrix.
