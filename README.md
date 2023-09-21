@@ -1,3 +1,44 @@
+# 2023 / 09 / 20
+Sr. Araujo ChangeLog
+Changes tested in a Raspberry Pi 400, Sense HAT V1.0, Raspberry Pi OS (64-bit) and Thonny 4.0.1
+If you want I test some other HAT, send to me the HAT or/and some money
+
++ Now 'Sense HAT Grid Editor' mirror to Sense HAT
++ Change name of new/modified files
++ Added guiSenseHAT.png
++ Refresh eight.png
++ Clean and comment code
++ Added class gridAnimation a list data structure to manage animation frames
++ Added sample code in gridFrameCode.py
++ Adjusted 'Export to PY'. Export to gridFrameCode.py
++ Adjusted 'Import from PY', Import from gridFrameCode.py
++ Adjusted 'Export to console'
++ Adjusted 'Export to PNG'. Export to gridFrameImage.png
++ Adjusted 'Import from PNG'
++ Adjusted 'Clear Grid'
++ Adjusted 'Rotate LEDs'
++ Adjusted 'Play on LEDs'
++ Adjusted 'Quit'
++ Adjusted '<-', '->', 'Delete', '+', '-'
+
+To do or fix:
+'Grid Editor' alone, with out the need of a HAT
+Adjust another HAT
+Add Sense HAT emu
+Save rotation by each frame
+Change color palette at runtime by the user
+'Save' window
+'Save As' window
+'Warning' window
+'Message' window
+'Export to', 'Import to' windows
+'Exit/Quit' window
+'Change color palette' window
+'Add', 'Insert', 'Push' and/or 'Append' Button
+update links to gui*.png
+Create a blog entry
+Create a Video (Youtube, Tick-Tock)
+
 # 2023 / 09 / 01
 Sr. Araujo ChangeLog
 + Added  and updated code to be more compatible with Thonny 4.0.1 over
