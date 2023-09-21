@@ -39,17 +39,17 @@ namehat = GetNameHAT()
 
 if  namehat == SENSEHAT or namehat == SENSEHATFB:
     print('Sense HAT auto detected')
-    os.system(mypath + '/gridSense.py')
+    os.system(mypath + '/8x8grid-sense.py')
 elif namehat == UNICORNHAT:
     print('Unicorn pHAT auto detected')
-    os.system(mypath + "/gridUnicorn.py")
+    os.system(mypath + "/8x8grid-unicorn.py")
 elif namehat == NOHAT:
     print('No HAT detected.')
     if answeryes('Do you have a Unicorn pHAT (y/n)? '):
         print('Configuring Unicorn pHAT')
-        os.system(mypath + "/gridUnicornpHAT.py")
+        os.system(mypath + "/8x8grid-unicornphat.py")
     elif answeryes('Do you have a Sense HAT (y/n)? '):
         print('Configuring Sense HAT')
-        os.system(mypath + "/gridSense.py")
+        os.system(mypath + "/8x8grid-sense.py")
 else:
     print("WARNING !!! Unknown HAT : " + namehat)
